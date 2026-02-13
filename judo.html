@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judo | SportsInfo Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ========== BASIC STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #02022a;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 150px;
+        }
+        
+        /* Background Effects */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 10%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(220, 53, 69, 0.15);
+            filter: blur(120px);
+            z-index: -1;
+        }
+        
+        body::after {
+            content: "";
+            position: absolute;
+            bottom: 10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(108, 117, 125, 0.1);
+            filter: blur(120px);
+            z-index: -1;
+        }
+        
+        /* ========== NAVIGATION ========== */
+        .main-nav {
+            background: rgba(26, 26, 46, 0.95);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #ffcc00;
+        }
+        
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo-highlight {
+            color: #ffcc00;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #ffcc00;
+        }
+        
+       
+        
+        /* ========== MAIN CONTAINER ========== */
+        .main-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 100px auto 50px;
+        }
+        
+        /* ========== PAGE HEADER ========== */
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .page-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            text-transform: uppercase;
+            background: #ffcc00;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        
+        /* ========== BACK BUTTON ========== */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            background: #ffcc00;
+            color: white;
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+        
+        .back-button:hover {
+            background: rgba(220, 53, 69, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        /* ========== HERO SECTION ========== */
+        .hero-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            border: 1px solid #ffcc00;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 3px solid #ffcc00;
+            margin-bottom: 30px;
+        }
+        
+        .hero-title {
+            color: #ffcc00;
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+        
+        /* ========== CONTENT CARDS ========== */
+        .content-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 25px 0;
+            border: 1px solid #ffcc00;
+            transition: all 0.3s;
+        }
+        
+        .content-card:hover {
+            border-color: #ffcc00;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px #ffcc00;
+        }
+        
+        .section-title {
+            color: #ffcc00;
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(220, 53, 69, 0.3);
+        }
+        
+        /* ========== TWO COLUMN LAYOUT ========== */
+        .two-column {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        /* ========== FEATURE BOX ========== */
+        .feature-box {
+            background: rgba(220, 53, 69, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ffcc00;
+        }
+        
+        .feature-title {
+            color: #ffcc00;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* ========== FACT BOX ========== */
+        .fact-box {
+            background: linear-gradient(135deg, rgba(220,53,69,0.1), rgba(255,107,124,0.1));
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #ffcc00;
+        }
+        
+        /* ========== PLAYER GALLERY ========== */
+        .player-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .player-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #ffcc00;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .player-card:hover {
+            border-color: #ffcc00;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(220, 53, 69, 0.3);
+        }
+        
+        .player-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .player-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .player-name {
+            color: #ffcc00;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .player-country {
+            color: #aaaaaa;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .player-role {
+            font-size: 14px;
+            color: #cccccc;
+        }
+        
+        /* ========== STATISTICS TABLE ========== */
+        .stats-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        
+        .stats-table {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-collapse: collapse;
+        }
+        
+        .stats-table th {
+            background: rgba(220, 53, 69, 0.2);
+            color: #ffcc00;
+            font-weight: 700;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .stats-table td {
+            padding: 15px;
+            border-bottom: 1px solid #ffcc00;
+            text-align: center;
+        }
+        
+        .stats-table tr:hover {
+            background: #ffcc00;
+        }
+        
+        /* ========== COUNTRIES GRID ========== */
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .country-item {
+            background: rgba(220, 53, 69, 0.1);
+            border: 1px solid #ffcc00;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .country-item:hover {
+            background: #ffcc00;
+            transform: scale(1.05);
+        }
+        
+        /* ========== INFO ITEMS ========== */
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .info-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(220, 53, 69, 0.1);
+            border-radius: 10px;
+            margin-right: 15px;
+            color: #ffcc00;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .info-content h4 {
+            color: #ffcc00;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        /* ========== MODAL STYLES ========== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-container {
+            width: 100%;
+            max-width: 800px;
+            background: #1a1a2e;
+            border: 2px solid #ffcc00;
+            border-radius: 20px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #ffcc00;
+            position: sticky;
+            top: 0;
+            background: #1a1a2e;
+            z-index: 1;
+        }
+        
+        .modal-title {
+            color: #ffcc00;
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+        
+        .close-modal:hover {
+            background: #ffcc00;
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .modal-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .modal-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #ffcc00;
+        }
+        
+        /* ========== TECHNIQUE BOXES ========== */
+        .technique-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .technique-box {
+            flex: 1;
+            background: rgba(220, 53, 69, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(220, 53, 69, 0.2);
+        }
+        
+        .technique-title {
+            color: #ffcc00;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        /* ========== BELT SYSTEM ========== */
+        .belt-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .belt-box {
+            background: rgba(220, 53, 69, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid #ffcc00;
+            text-align: center;
+        }
+        
+        .belt-color {
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        /* ========== TECHNIQUE GRID ========== */
+        .technique-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .technique-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid #ffcc00;
+            transition: all 0.3s;
+        }
+        
+        .technique-card:hover {
+            border-color: #dc3545;
+            transform: translateY(-5px);
+        }
+        
+        .technique-icon {
+            font-size: 40px;
+            color: #ffcc00;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        /* ========== WEIGHT CLASSES ========== */
+        .weight-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .weight-box {
+            background: rgba(220, 53, 69, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ffcc00;}
+        
+        /* ========== FOOTER ========== */
+        .main-footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 80px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .footer-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h5 {
+            color: #ffcc00;
+            margin-bottom: 15px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #ffcc00;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+        
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .page-title {
+                font-size: 40px;
+            }
+            
+            .two-column {
+                flex-direction: column;
+            }
+            
+            .modal-row {
+                flex-direction: column;
+            }
+            
+            .modal-image {
+                width: 100%;
+                height: 300px;
+            }
+            
+            .player-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .technique-container {
+                flex-direction: column;
+            }
+            
+            .belt-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .technique-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 32px;
+            }
+            
+            .hero-section {
+                padding: 20px;
+            }
+            
+            .player-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .countries-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .belt-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .weight-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                SPORTS<span class="logo-highlight">INFO</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Back Button -->
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">JUDO</h1>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=1200" alt="Judo Competition" class="hero-image">
+            <h2 class="hero-title">THE GENTLE WAY</h2>
+            <p class="hero-description">
+                Judo is a modern Japanese martial art and Olympic sport created by Jigoro Kano in 1882. It emphasizes using an opponent's force against them, with techniques including throws, pins, joint locks, and chokes. The philosophy centers around maximum efficiency with minimum effort.
+            </p>
+        </div>
+
+        <!-- Basic Information -->
+        <div class="content-card">
+            <h2 class="section-title">BASIC INFORMATION</h2>
+            <div class="two-column">
+                <div class="column">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Competition Format</h4>
+                            <p>One-on-one matches lasting 4 minutes (women) or 5 minutes (men). Can be won by ippon (full point), waza-ari (half point), or penalties.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Match Duration</h4>
+                            <p>Men: 5 minutes | Women: 4 minutes | Golden Score: Unlimited if tied | Children: 2-3 minutes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Main Philosophy</h4>
+                            <p>Seiryoku zen'yō (maximum efficiency) and jita kyōei (mutual welfare). Using opponent's strength against them.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-ruler"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Competition Area</h4>
+                            <p>Tatami mat: 14×14m (competition area) with 10×10m contest area. Safety area of 3m around edges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Judo Scoring -->
+        <div class="content-card">
+            <h2 class="section-title">SCORING SYSTEM</h2>
+            <div class="technique-container">
+                <div class="technique-box">
+                    <h3 class="technique-title">IPPON</h3>
+                    <p><strong>Points:</strong> Full point</p>
+                    <p><strong>Result:</strong> Immediate win</p>
+                    <p><strong>Conditions:</strong> Perfect throw, 20-second pin, submission</p>
+                    <p><strong>Symbol:</strong> Red flag/scoreboard</p>
+                </div>
+                
+                <div class="technique-box">
+                    <h3 class="technique-title">WAZA-ARI</h3>
+                    <p><strong>Points:</strong> Half point</p>
+                    <p><strong>Result:</strong> Two = Ippon</p>
+                    <p><strong>Conditions:</strong> Good throw, 15-19 second pin</p>
+                    <p><strong>Symbol:</strong> Yellow flag/scoreboard</p>
+                </div>
+                
+                <div class="technique-box">
+                    <h3 class="technique-title">YUKO</h3>
+                    <p><strong>Points:</strong> Minor score</p>
+                    <p><strong>Result:</strong> Tiebreaker</p>
+                    <p><strong>Conditions:</strong> Fair throw, 10-14 second pin</p>
+                    <p><strong>Symbol:</strong> Blue flag/scoreboard</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="two-column">
+            <!-- Left Column - Techniques -->
+            <div class="column">
+                <div class="content-card">
+                    <h2 class="section-title">JUDO TECHNIQUES</h2>
+                    
+                    <div class="feature-box">
+                        <h3 class="feature-title">
+                            <i class="fas fa-hands"></i> Nage-waza (Throwing Techniques)
+                        </h3>
+                        <ul>
+                            <li><strong>Te-waza:</strong> Hand techniques (seoi-nage, tai-otoshi)</li>
+                            <li><strong>Koshi-waza:</strong> Hip techniques (o-goshi, uki-goshi)</li>
+                            <li><strong>Ashi-waza:</strong> Foot/leg techniques (o-soto-gari, uchi-mata)</li>
+                            <li><strong>Ma-sutemi-waza:</strong> Sacrifice techniques (tomoe-nage)</li>
+                            <li><strong>Yoko-sutemi-waza:</strong> Side sacrifice techniques (yoko-guruma)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h3 class="feature-title">
+                            <i class="fas fa-user-slash"></i> Katame-waza (Grappling Techniques)
+                        </h3>
+                        <ul>
+                            <li><strong>Osae-komi-waza:</strong> Holding/pinning techniques</li>
+                            <li><strong>Shime-waza:</strong> Strangulation/choking techniques</li>
+                            <li><strong>Kansetsu-waza:</strong> Joint locking techniques (elbow only)</li>
+                            <li><strong>Transition:</strong> Combining throws with ground techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Rules -->
+            <div class="column">
+                <div class="content-card">
+                    <h2 class="section-title">RULES & PENALTIES</h2>
+                    
+                    <div class="fact-box">
+                        <h3 class="feature-title">
+                            <i class="fas fa-ban"></i> Prohibited Actions
+                        </h3>
+                        <ul>
+                            <li>Attacking joints other than elbow</li>
+                            <li>Striking, kicking, or punching</li>
+                            <li>Wearing hard/metallic objects</li>
+                            <li>Passivity (non-combativity)</li>
+                            <li>False attacks (false entry)</li>
+                            <li>Dangerous throws (kawazu-gake)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="fact-box">
+                        <h3 class="feature-title">
+                            <i class="fas fa-exclamation-circle"></i> Penalties (Shido)
+                        </h3>
+                        <ul>
+                            <li><strong>First Shido:</strong> Warning</li>
+                            <li><strong>Second Shido:</strong> Yuko for opponent</li>
+                            <li><strong>Third Shido:</strong> Waza-ari for opponent</li>
+                            <li><strong>Fourth Shido:</strong> Hansoku-make (disqualification)</li>
+                            <li><strong>Serious Offense:</strong> Direct Hansoku-make</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Belt System -->
+        <div class="content-card">
+            <h2 class="section-title">JUDO BELT SYSTEM (KYU/DAN)</h2>
+            <div class="belt-container">
+                <div class="belt-box">
+                    <div class="belt-color" style="background: white;"></div>
+                    <h3 style="color: #dc3545;">6th Kyu</h3>
+                    <p>Beginner<br>White Belt</p>
+                </div>
+                
+                <div class="belt-box">
+                    <div class="belt-color" style="background: yellow;"></div>
+                    <h3 style="color: #dc3545;">5th Kyu</h3>
+                    <p>Beginner<br>Yellow Belt</p>
+                </div>
+                
+                <div class="belt-box">
+                    <div class="belt-color" style="background: orange;"></div>
+                    <h3 style="color: #dc3545;">4th Kyu</h3>
+                    <p>Intermediate<br>Orange Belt</p>
+                </div>
+                
+                <div class="belt-box">
+                    <div class="belt-color" style="background: green;"></div>
+                    <h3 style="color: #dc3545;">3rd Kyu</h3>
+                    <p>Intermediate<br>Green Belt</p>
+                </div>
+                
+                <div class="belt-box">
+                    <div class="belt-color" style="background: blue;"></div>
+                    <h3 style="color: #dc3545;">2nd Kyu</h3>
+                    <p>Advanced<br>Blue Belt</p>
+                </div>
+                
+                <div class="belt-box">
+                    <div class="belt-color" style="background: brown;"></div>
+                    <h3 style="color: #dc3545;">1st Kyu</h3>
+                    <p>Advanced<br>Brown Belt</p>
+                </div>
+                
+                <div class="belt-box">
+                    <div class="belt-color" style="background: black;"></div>
+                    <h3 style="color: #dc3545;">1st-5th Dan</h3>
+                    <p>Master<br>Black Belt</p>
+                </div>
+                
+                <div class="belt-box">
+                    <div class="belt-color" style="background: #ffd700; border: 1px solid #aaa;"></div>
+                    <h3 style="color: #dc3545;">6th-8th Dan</h3>
+                    <p>Senior Master<br>Red-White Belt</p>
+                </div>
+                
+                <div class="belt-box">
+                    <div class="belt-color" style="background: red;"></div>
+                    <h3 style="color: #dc3545;">9th-10th Dan</h3>
+                    <p>Grand Master<br>Red Belt</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weight Classes -->
+        <div class="content-card">
+            <h2 class="section-title">WEIGHT CLASSES</h2>
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #dc3545; margin-bottom: 15px;">Men's Categories</h3>
+                <div class="weight-container">
+                    <div class="weight-box">
+                        <h4>Extra Lightweight</h4>
+                        <p><strong>Up to:</strong> 60kg</p>
+                        <p>(-132 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Half Lightweight</h4>
+                        <p><strong>Up to:</strong> 66kg</p>
+                        <p>(-146 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Lightweight</h4>
+                        <p><strong>Up to:</strong> 73kg</p>
+                        <p>(-161 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Half Middleweight</h4>
+                        <p><strong>Up to:</strong> 81kg</p>
+                        <p>(-179 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Middleweight</h4>
+                        <p><strong>Up to:</strong> 90kg</p>
+                        <p>(-198 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Half Heavyweight</h4>
+                        <p><strong>Up to:</strong> 100kg</p>
+                        <p>(-220 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Heavyweight</h4>
+                        <p><strong>Over:</strong> 100kg</p>
+                        <p>(+220 lbs)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 style="color: #dc3545; margin-bottom: 15px;">Women's Categories</h3>
+                <div class="weight-container">
+                    <div class="weight-box">
+                        <h4>Extra Lightweight</h4>
+                        <p><strong>Up to:</strong> 48kg</p>
+                        <p>(-106 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Half Lightweight</h4>
+                        <p><strong>Up to:</strong> 52kg</p>
+                        <p>(-115 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Lightweight</h4>
+                        <p><strong>Up to:</strong> 57kg</p>
+                        <p>(-126 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Half Middleweight</h4>
+                        <p><strong>Up to:</strong> 63kg</p>
+                        <p>(-139 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Middleweight</h4>
+                        <p><strong>Up to:</strong> 70kg</p>
+                        <p>(-154 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Half Heavyweight</h4>
+                        <p><strong>Up to:</strong> 78kg</p>
+                        <p>(-172 lbs)</p>
+                    </div>
+                    
+                    <div class="weight-box">
+                        <h4>Heavyweight</h4>
+                        <p><strong>Over:</strong> 78kg</p>
+                        <p>(+172 lbs)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Famous Techniques -->
+        <div class="content-card">
+            <h2 class="section-title">FAMOUS JUDO TECHNIQUES</h2>
+            <div class="technique-grid">
+                <div class="technique-card">
+                    <div class="technique-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h4 style="color: #dc3545; margin-bottom: 10px;">Uchi-mata</h4>
+                    <p><strong>Type:</strong> Ashi-waza (leg technique)</p>
+                    <p><strong>Description:</strong> Inner thigh throw. One of the most popular competition throws.</p>
+                    <p><strong>Master:</strong> Yasuhiro Yamashita</p>
+                </div>
+                
+                <div class="technique-card">
+                    <div class="technique-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h4 style="color: #dc3545; margin-bottom: 10px;">O-soto-gari</h4>
+                    <p><strong>Type:</strong> Ashi-waza (leg technique)</p>
+                    <p><strong>Description:</strong> Major outer reap. Fundamental throw taught to beginners.</p>
+                    <p><strong>Master:</strong> Kosei Inoue</p>
+                </div>
+                
+                <div class="technique-card">
+                    <div class="technique-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4 style="color: #dc3545; margin-bottom: 10px;">Seoi-nage</h4>
+                    <p><strong>Type:</strong> Te-waza (hand technique)</p>
+                    <p><strong>Description:</strong> Shoulder throw. Comes in morote (two-handed) and ippon (one-handed) variations.</p>
+                    <p><strong>Master:</strong> Tadahiro Nomura</p>
+                </div>
+                
+                <div class="technique-card">
+                    <div class="technique-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h4 style="color: #dc3545; margin-bottom: 10px;">Tomoe-nage</h4>
+                    <p><strong>Type:</strong> Sutemi-waza (sacrifice technique)</p>
+                    <p><strong>Description:</strong> Circle throw. Sacrifice throw where judoka falls backward.</p>
+                    <p><strong>Master:</strong> Ryoko Tani</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics & Records -->
+        <div class="content-card">
+            <h2 class="section-title">WORLD RECORDS & STATISTICS</h2>
+            
+            <div class="stats-container">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Record Type</th>
+                            <th>Record</th>
+                            <th>Athlete</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Most Olympic Golds</td>
+                            <td>4 Gold Medals</td>
+                            <td>Tadahiro Nomura</td>
+                            <td>Japan (1996, 2000, 2004, 2008)</td>
+                        </tr>
+                        <tr>
+                            <td>Most World Championships</td>
+                            <td>8 World Titles</td>
+                            <td>Teddy Riner</td>
+                            <td>France (2007-2017)</td>
+                        </tr>
+                        <tr>
+                            <td>Longest Unbeaten Streak</td>
+                            <td>154 Matches</td>
+                            <td>Teddy Riner</td>
+                            <td>2010-2020</td>
+                        </tr>
+                        <tr>
+                            <td>Youngest World Champion</td>
+                            <td>17 years</td>
+                            <td>Ryoko Tani</td>
+                            <td>Japan, 1993</td>
+                        </tr>
+                        <tr>
+                            <td>Most Olympic Medals</td>
+                            <td>5 Medals</td>
+                            <td>Ryoko Tani</td>
+                            <td>Japan (1992-2008)</td>
+                        </tr>
+                        <tr>
+                            <td>Fastest Ippon</td>
+                            <td>6 seconds</td>
+                            <td>Ilias Iliadis</td>
+                            <td>2004 Olympics Final</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Famous Players -->
+        <div class="content-card">
+            <h2 class="section-title">LEGENDARY JUDOKA</h2>
+            <p>Click on any athlete to view detailed information</p>
+            
+            <div class="player-gallery">
+                <!-- Player 1 -->
+                <div class="player-card" onclick="showPlayerModal('riner')">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500" alt="Teddy Riner" class="player-image">
+                    <div class="player-info">
+                        <div class="player-name">Teddy Riner</div>
+                        <div class="player-country">France</div>
+                        <div class="player-role">Heavyweight</div>
+                    </div>
+                </div>
+                
+                <!-- Player 2 -->
+                <div class="player-card" onclick="showPlayerModal('nomura')">
+                    <img src="https://images.unsplash.com/photo-1583500178807-0f9c3cbb5c8d?w=500" alt="Tadahiro Nomura" class="player-image">
+                    <div class="player-info">
+                        <div class="player-name">Tadahiro Nomura</div>
+                        <div class="player-country">Japan</div>
+                        <div class="player-role">Extra Lightweight</div>
+                    </div>
+                </div>
+                
+                <!-- Player 3 -->
+                <div class="player-card" onclick="showPlayerModal('tani')">
+                    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e5d10?w=500" alt="Ryoko Tani" class="player-image">
+                    <div class="player-info">
+                        <div class="player-name">Ryoko Tani</div>
+                        <div class="player-country">Japan</div>
+                        <div class="player-role">Extra Lightweight</div>
+                    </div>
+                </div>
+                
+                <!-- Player 4 -->
+                <div class="player-card" onclick="showPlayerModal('inoue')">
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0ea3ff8db4a?w=500" alt="Kosei Inoue" class="player-image">
+                    <div class="player-info">
+                        <div class="player-name">Kosei Inoue</div>
+                        <div class="player-country">Japan</div>
+                        <div class="player-role">Half Heavyweight</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Facts -->
+        <div class="content-card">
+            <h2 class="section-title">IMPORTANT FACTS</h2>
+            <div class="two-column">
+                <div class="column">
+                    <div class="fact-box">
+                        <h3 class="feature-title">
+                            <i class="fas fa-history"></i> History & Origin
+                        </h3>
+                        <ul>
+                            <li><strong>Founder:</strong> Jigoro Kano (1860-1938)</li>
+                            <li><strong>Founded:</strong> 1882 at Eisho-ji temple</li>
+                            <li><strong>First Name:</strong> Kano Jiu-Jitsu (later Kodokan Judo)</li>
+                            <li><strong>First Olympics:</strong> 1964 Tokyo (men), 1992 Barcelona (women)</li>
+                            <li><strong>IJF Founded:</strong> 1951 (International Judo Federation)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="fact-box">
+                        <h3 class="feature-title">
+                            <i class="fas fa-trophy"></i> Major Tournaments
+                        </h3>
+                        <ul>
+                            <li><strong>Olympic Games:</strong> Every 4 years</li>
+                            <li><strong>World Judo Championships:</strong> Annual (except Olympic years)</li>
+                            <li><strong>Grand Slam:</strong> Paris, Tokyo, Abu Dhabi, etc.</li>
+                            <li><strong>Grand Prix:</strong> Various locations worldwide</li>
+                            <li><strong>Continental Championships:</strong> Asia, Europe, Pan-Am, etc.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Judo Nations -->
+        <div class="content-card">
+            <h2 class="section-title">TOP JUDO NATIONS</h2>
+            <p>Judo is practiced in over 200 countries with strong traditions in several key nations</p>
+            
+            <div class="countries-grid">
+                <div class="country-item">Japan</div>
+                <div class="country-item">France</div>
+                <div class="country-item">South Korea</div>
+                <div class="country-item">Russia</div>
+                <div class="country-item">Brazil</div>
+                <div class="country-item">Germany</div>
+                <div class="country-item">Mongolia</div>
+                <div class="country-item">Netherlands</div>
+                <div class="country-item">Georgia</div>
+                <div class="country-item">Cuba</div>
+                <div class="country-item">China</div>
+                <div class="country-item">United States</div>
+                <div class="country-item">Great Britain</div>
+                <div class="country-item">Israel</div>
+                <div class="country-item">Kazakhstan</div>
+                <div class="country-item">Uzbekistan</div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <h3 style="color: #dc3545; margin-bottom: 15px;">Regional Dominance</h3>
+                <p><strong>Japan:</strong> Birthplace of judo, most Olympic medals (84), technical excellence</p>
+                <p><strong>Europe:</strong> France leads with strong programs in Netherlands, Germany, Georgia</p>
+                <p><strong>Asia:</strong> South Korea, Mongolia, China with distinctive styles</p>
+                <p><strong>Americas:</strong> Brazil (judo's second home), Cuba, United States</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player Modals -->
+    <!-- Modal 1: Teddy Riner -->
+    <div id="modal-riner" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">TEDDY RINER</h2>
+                <button class="close-modal" onclick="closeAllModals()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500" alt="Teddy Riner" class="modal-image">
+                    <div style="flex: 1;">
+                        <h3 style="color: #dc3545; margin-bottom: 15px;">The Greatest Heavyweight</h3>
+                        <p><strong>Nationality:</strong> French</p>
+                        <p><strong>Born:</strong> April 7, 1989</p>
+                        <p><strong>Height:</strong> 2.04m (6'8")</p>
+                        <p><strong>Weight:</strong> 131kg (289 lbs)</p>
+                        <p><strong>Category:</strong> +100kg (Heavyweight)</p>
+                        <p><strong>Club:</strong> PSG Judo</p>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h4 style="color: #dc3545; margin-bottom: 10px;">Career Achievements</h4>
+                    <ul>
+                        <li>10-time World Champion (2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2017, 2022)</li>
+                        <li>2-time Olympic Champion (2012 London, 2016 Rio)</li>
+                        <li>Olympic Bronze (2008 Beijing, 2020 Tokyo)</li>
+                        <li>5-time European Champion</li>
+                        <li>154-match unbeaten streak (2010-2020)</li>
+                        <li>Youngest World Champion in heavyweight history (18 years, 2007)</li>
+                        <li>Only judoka to win 10 world titles</li>
+                        <li>Longest reign as world number 1</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Tadahiro Nomura -->
+    <div id="modal-nomura" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">TADAHIRO NOMURA</h2>
+                <button class="close-modal" onclick="closeAllModals()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <img src="https://images.unsplash.com/photo-1583500178807-0f9c3cbb5c8d?w=500" alt="Tadahiro Nomura" class="modal-image">
+                    <div style="flex: 1;">
+                        <h3 style="color: #dc3545; margin-bottom: 15px;">The Olympic Legend</h3>
+                        <p><strong>Nationality:</strong> Japanese</p>
+                        <p><strong>Born:</strong> December 10, 1974</p>
+                        <p><strong>Height:</strong> 1.60m (5'3")</p>
+                        <p><strong>Weight:</strong> 60kg (132 lbs)</p>
+                        <p><strong>Category:</strong> -60kg (Extra Lightweight)</p>
+                        <p><strong>Club:</strong> Tokai University</p>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h4 style="color: #dc3545; margin-bottom: 10px;">Career Achievements</h4>
+                    <ul>
+                        <li>Only judoka to win 3 consecutive Olympic gold medals</li>
+                        <li>Olympic Champion: 1996 Atlanta, 2000 Sydney, 2004 Athens</li>
+                        <li>1999 Asian Champion</li>
+                        <li>Signature technique: Ko-uchi-gari (minor inner reap)</li>
+                        <li>Known for exceptional speed and tactical intelligence</li>
+                        <li>Retired undefeated in Olympic competition</li>
+                        <li>Part of famous judo family (uncle Toyokazu Nomura also Olympic champion)</li>
+                        <li>Currently serves as coach and commentator</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br><br><br>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h5>Sports Categories</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Martial Arts</a></li>
+                        <li><a href="index.html">Olympic Sports</a></li>
+                        <li><a href="judo.html">Judo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h5>Judo Techniques</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Nage-waza (Throws)</a></li>
+                        <li><a href="#">Katame-waza (Grappling)</a></li>
+                        <li><a href="#">Atemi-waza (Strikes)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h5>Major Tournaments</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">World Championships</a></li>
+                        <li><a href="#">Olympic Games</a></li>
+                        <li><a href="#">Grand Slam</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h5>Follow Us</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                © 2026 SportsInfo Pro | All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Modals -->
+    <script>
+        // Simple Modal Functions
+        function showPlayerModal(playerId) {
+            // Hide all modals first
+            closeAllModals();
+            
+            // Show the selected player modal
+            const modal = document.getElementById('modal-' + playerId);
+            if (modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        function closeAllModals() {
+            // Get all modals
+            const modals = document.querySelectorAll('.modal-overlay');
+            
+            // Hide each modal
+            modals.forEach(function(modal) {
+                modal.style.display = 'none';
+            });
+            
+            // Re-enable scrolling
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                closeAllModals();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeAllModals();
+            }
+        });
+    </script>
+</body>
+</html>
