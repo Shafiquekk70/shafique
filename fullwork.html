@@ -18,7 +18,18 @@
         }
 
         /* Glowing Blobs Effect */
-       
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 123, 255, 0.15);
+            filter: blur(120px);
+            z-index: -1;
+        }
+        
         body::after {
             content: "";
             position: fixed;
