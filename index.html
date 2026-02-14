@@ -459,6 +459,38 @@
                 font-size: 1.2rem;
             }
         }
+
+/* Search Bar Responsive*/
+@media (max-width: 480px) {
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 25px;
+        padding: 15px;
+    }
+    
+    .search-box input {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+        border-radius: 0;
+        padding: 10px 0;
+    }
+    
+    .search-box button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .sport-card {
+        height: 220px;
+    }
+    
+    .carousel-caption {
+        padding: 10px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -662,17 +694,17 @@
                 <div class="col-lg-3 col-md-6">
                     <h5>Sports Categories</h5>
                     <ul>
-                        <li><a href="#">Team Sports</a></li>
-                        <li><a href="#">Individual Sports</a></li>
-                        <li><a href="#">Extreme Sports</a></li>
+                        <li><a href="football.html">football</a></li>
+                        <li><a href="cricket.html">cricket</a></li>
+                        <li><a href="motorcycle.html">motorcycle racing</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5>Quick Links</h5>
                     <ul>
-                        <li><a href="#">Live Scores</a></li>
-                        <li><a href="#">Upcoming Events</a></li>
-                        <li><a href="#">Player Stats</a></li>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -686,14 +718,14 @@
                 <div class="col-lg-3 col-md-6">
                     <h5>Follow Us</h5>
                     <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
+                        <li><a href="https://x.com/">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/">Instagram</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                @ 2026 SportsInfo Pro | All Rights Reserved
+                @ 2026 SportsInfo| All Rights Reserved
             </div>
         </div>
     </footer>
