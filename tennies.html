@@ -653,6 +653,150 @@
             margin: 0 5px;
             font-weight: bold;
         }
+
+/* ========== NAVBAR FIXES ========== */
+
+/* Navbar mobile ke liye */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .nav-link {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        gap: 10px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+/* ========== FOOTER FIXES ========== */
+
+/* Footer position theek karo */
+.main-footer {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 80px;
+    border-top: 1px solid #ffcc00;
+    width: 100%;
+    position: relative;  /* absolute ki jagah relative */
+    bottom: auto;
+    clear: both;
+}
+
+/* Body padding hatao */
+body {
+    padding-bottom: 0;  /* 150px ki jagah 0 */
+}
+
+/* Footer grid responsive */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);  /* Tablet: 2 columns */
+        gap: 30px;
+    }
+    
+    .footer-column h5 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr;  /* Mobile: 1 column */
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .footer-column h5 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-links a {
+        font-size: 12px;
+    }
+    
+    .footer-bottom {
+        font-size: 11px;
+        padding: 15px 0;
+    }
+}
+
+/* Icons alignment */
+.footer-links i {
+    margin-right: 8px;
+    width: 16px;
+    color: #ffcc00;
+}
+
+@media (max-width: 480px) {
+    .footer-links i {
+        margin-right: 5px;
+    }
+}
+
+/* Text colors fix */
+.french-open, .wimbledon, .us-open {
+    color: white;  /* Text white ho */
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
     </style>
 </head>
 <body>
@@ -1081,31 +1225,31 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <h5>Grand Slams</h5>
+                    <h5>Games</h5>
                     <ul class="footer-links">
-                        <li><a href="#"><span class="australian-open">Australian Open</span></a></li>
-                        <li><a href="#"><span class="french-open">French Open</span></a></li>
-                        <li><a href="#"><span class="wimbledon">Wimbledon</span></a></li>
-                        <li><a href="#"><span class="us-open">US Open</span></a></li>
+                        
+                        <li><a href="rugby.html"><span class="french-open">rugby</span></a></li>
+                        <li><a href="chess.html"><span class="wimbledon">chess</span></a></li>
+                        <li><a href="tennies.html"><span class="us-open">tennis</span></a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h5>Tennis Tours</h5>
                     <ul class="footer-links">
-                        <li><a href="#">ATP Tour (Men)</a></li>
-                        <li><a href="#">WTA Tour (Women)</a></li>
-                        <li><a href="#">Davis Cup</a></li>
-                        <li><a href="#">Fed Cup</a></li>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="about.html">about</a></li>
+                        
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h5>Contact Us</h5>
                     <ul class="footer-links">
-                        <li><a href="contact-us.html">SportsInfo HQ</a></li>
-                        <li><a href="mailto:info@sportsinfo.com">info@sportsinfo.com</a></li>
-                        <li><a href="tel:+1-234-567-890">+1-234-567-890</a></li>
+                        <li><a href="contact.html">SportsInfo HQ</a></li>
+                        <li><a href="mailto:abq@gmail.com">abq@gmail.com.com</a></li>
+                        <li><a href="tel:+1-234-567-890">03243129270</a></li>
                     </ul>
                 </div>
                 

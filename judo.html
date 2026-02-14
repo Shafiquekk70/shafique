@@ -673,6 +673,26 @@
                 grid-template-columns: 1fr;
             }
         }
+
+/* FOOTER FIX - JUDO PAGE */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 0 !important;
+    }
+    
+    .main-footer {
+        position: relative !important;
+        bottom: auto !important;
+        margin-top: 40px !important;
+        clear: both !important;
+    }
+    
+    .main-container {
+        margin-bottom: 20px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -1148,25 +1168,6 @@
                     </div>
                 </div>
                 
-                <!-- Player 3 -->
-                <div class="player-card" onclick="showPlayerModal('tani')">
-                    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e5d10?w=500" alt="Ryoko Tani" class="player-image">
-                    <div class="player-info">
-                        <div class="player-name">Ryoko Tani</div>
-                        <div class="player-country">Japan</div>
-                        <div class="player-role">Extra Lightweight</div>
-                    </div>
-                </div>
-                
-                <!-- Player 4 -->
-                <div class="player-card" onclick="showPlayerModal('inoue')">
-                    <img src="https://images.unsplash.com/photo-1594736797933-d0ea3ff8db4a?w=500" alt="Kosei Inoue" class="player-image">
-                    <div class="player-info">
-                        <div class="player-name">Kosei Inoue</div>
-                        <div class="player-country">Japan</div>
-                        <div class="player-role">Half Heavyweight</div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -1322,8 +1323,8 @@
                 <div class="footer-column">
                     <h5>Sports Categories</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">Martial Arts</a></li>
-                        <li><a href="index.html">Olympic Sports</a></li>
+                        <li><a href="cricket.html">cricket</a></li>
+                        <li><a href="athiletes.html">athilitc</a></li>
                         <li><a href="judo.html">Judo</a></li>
                     </ul>
                 </div>
@@ -1331,9 +1332,9 @@
                 <div class="footer-column">
                     <h5>Judo Techniques</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Nage-waza (Throws)</a></li>
-                        <li><a href="#">Katame-waza (Grappling)</a></li>
-                        <li><a href="#">Atemi-waza (Strikes)</a></li>
+                        <li><a href="judo.html">home</a></li>
+                        <li><a href="index.html">index</a></li>
+                        <li><a href="about.html">about</a></li>
                     </ul>
                 </div>
                 
@@ -1349,15 +1350,15 @@
                 <div class="footer-column">
                     <h5>Follow Us</h5>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="www.x.com"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="www.facebook.com"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="www.instagram.com"><i class="fab fa-instagram"></i> Instagram</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                © 2026 SportsInfo Pro | All Rights Reserved
+                © 2026 SportsInfo| All Rights Reserved
             </div>
         </div>
     </footer>

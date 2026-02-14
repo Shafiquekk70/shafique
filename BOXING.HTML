@@ -629,6 +629,295 @@
         .belt-gold { background: linear-gradient(to right, #1d29b0, #ffed4e, #ffd700); }
         .belt-silver { background: linear-gradient(to right, #c0c0c0, #e0e0e0, #c0c0c0); }
         .belt-bronze { background: linear-gradient(to right, #cd7f32, #e69966, #cd7f32); }
+
+
+
+/* ===== MOBILE FIXES - BOXING PAGE ===== */
+
+/* FIX 1: FOOTER KO THEEK KARO */
+@media (max-width: 768px) {
+    body {
+        position: relative;
+        min-height: 100vh;
+        padding-bottom: 0 !important;  /* Extra padding hatao */
+    }
+    
+    .main-footer {
+        position: relative !important;  /* Absolute hatao */
+        bottom: auto !important;
+        margin-top: 40px;
+        padding: 30px 0 15px;
+    }
+    
+    .main-container {
+        margin-bottom: 20px;
+    }
+}
+
+/* FIX 2: CARDS/TEXT MOBILE KE LIYE */
+@media (max-width: 768px) {
+    /* Content Cards */
+    .content-card {
+        padding: 20px 15px !important;
+        margin: 15px 0;
+    }
+    
+    .content-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Section Titles */
+    .section-title {
+        font-size: 22px !important;
+        margin-bottom: 15px;
+    }
+    
+    /* Feature Boxes */
+    .feature-box {
+        padding: 15px;
+    }
+    
+    .feature-box ul {
+        padding-left: 20px;
+    }
+    
+    .feature-box li {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
+    /* Info Items */
+    .info-item {
+        margin-bottom: 20px;
+    }
+    
+    .info-content h4 {
+        font-size: 16px;
+    }
+    
+    .info-content p {
+        font-size: 13px;
+    }
+    
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        margin-right: 12px;
+    }
+    
+    /* Format Boxes */
+    .format-box {
+        padding: 15px;
+    }
+    
+    .format-box p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    
+    .format-title {
+        font-size: 18px;
+    }
+    
+    /* Fact Boxes */
+    .fact-box {
+        padding: 15px;
+    }
+    
+    .fact-box ul {
+        padding-left: 20px;
+    }
+    
+    .fact-box li {
+        font-size: 13px;
+    }
+    
+    /* Weight Classes */
+    .weight-classes-grid {
+        gap: 10px;
+    }
+    
+    .weight-class-item {
+        padding: 10px;
+    }
+    
+    .weight-class-title {
+        font-size: 14px;
+    }
+    
+    .weight-range {
+        font-size: 12px;
+    }
+    
+    /* Boxer Cards */
+    .boxer-gallery {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+    }
+    
+    .boxer-image {
+        height: 180px;
+    }
+    
+    .boxer-info {
+        padding: 12px;
+    }
+    
+    .boxer-name {
+        font-size: 15px;
+    }
+    
+    .boxer-country {
+        font-size: 12px;
+    }
+    
+    .boxer-weight-class {
+        font-size: 12px;
+    }
+    
+    .championship-belt {
+        padding: 3px 10px;
+        font-size: 10px;
+        margin: 2px;
+    }
+}
+
+/* FIX 3: CHHOTI SCREEN (480px) */
+@media (max-width: 480px) {
+    .boxer-gallery {
+        grid-template-columns: 1fr !important;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .hero-section {
+        padding: 15px !important;
+    }
+    
+    .hero-image {
+        height: 180px !important;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+    }
+    
+    .page-title {
+        font-size: 32px !important;
+    }
+    
+    .two-column {
+        gap: 15px;
+    }
+    
+    .weight-classes-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Modal fixes */
+    .modal-container {
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .modal-image {
+        height: 180px;
+    }
+    
+    .modal-body ul {
+        padding-left: 20px;
+        font-size: 13px;
+    }
+}
+
+/* FIX 4: NAVIGATION MOBILE */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+    
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+        background: rgba(26, 15, 10, 0.95);
+        padding: 8px;
+        border-radius: 40px;
+    }
+    
+    .nav-link {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+}
+
+/* FIX 5: TEXT READABILITY */
+@media (max-width: 768px) {
+    p, li, .hero-description, .fact-box p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    h3.feature-title {
+        font-size: 16px;
+    }
+    
+    strong {
+        font-weight: 600;
+    }
+}
+
+/* FIX 6: STATS TABLE */
+@media (max-width: 768px) {
+    .stats-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+    
+    .stats-table {
+        min-width: 600px;
+    }
+    
+    .stats-table th,
+    .stats-table td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+}
+
+/* FIX 7: SPACING */
+@media (max-width: 768px) {
+    .main-container {
+        margin: 80px auto 20px;
+    }
+    
+    .hero-section {
+        margin: 20px 0;
+    }
+    
+    .back-button {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+}
+
+    
     </style>
 </head>
 <body>

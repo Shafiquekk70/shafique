@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ========== BASIC STYLES ========== */
+        /* BASIC STYLES */
         * {
             margin: 0;
             padding: 0;
@@ -24,32 +24,7 @@
             padding-bottom: 150px;
         }
         
-        /* Background Effects */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 10%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: rgba(255, 80, 0, 0.15);
-            filter: blur(120px);
-            z-index: -1;
-        }
-        
-        body::after {
-            content: "";
-            position: absolute;
-            bottom: 10%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: rgba(0, 122, 255, 0.1);
-            filter: blur(120px);
-            z-index: -1;
-        }
-        
-        /* ========== NAVIGATION ========== */
+        /*NAVIGATION */
         .main-nav {
             background: rgba(10, 21, 32, 0.95);
             padding: 20px 0;
@@ -104,14 +79,14 @@
             color:#ffcc00;
         }
         
-        /* ========== MAIN CONTAINER ========== */
+        /*  MAIN CONTAINER  */
         .main-container {
             width: 90%;
             max-width: 1200px;
             margin: 100px auto 50px;
         }
         
-        /* ========== PAGE HEADER ========== */
+        /* PAGE HEADER */
         .page-header {
             text-align: center;
             margin-bottom: 50px;
@@ -123,12 +98,12 @@
             font-weight: 800;
             text-transform: uppercase;
             background: linear-gradient(to right,#ffcc00, #ffcc00);
-            -webkit-background-clip: text;
+        background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
         }
         
-        /* ========== BACK BUTTON ========== */
+        /*  BACK BUTTON  */
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -148,7 +123,7 @@
             transform: translateX(-5px);
         }
         
-        /* ========== HERO SECTION ========== */
+        /* HERO SECTION */
         .hero-section {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 25px;
@@ -180,7 +155,7 @@
             color: #cccccc;
         }
         
-        /* ========== CONTENT CARDS ========== */
+        /*  CONTENT CARDS */
         .content-card {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
@@ -205,7 +180,7 @@
             border-bottom: 2px solid rgba(255, 80, 0, 0.3);
         }
         
-        /* ========== TWO COLUMN LAYOUT ========== */
+        /*  TWO COLUMN LAYOUT */
         .two-column {
             display: flex;
             gap: 30px;
@@ -216,7 +191,7 @@
             flex: 1;
         }
         
-        /* ========== FEATURE BOX ========== */
+        /*  FEATURE BOX */
         .feature-box {
             background: rgba(255, 80, 0, 0.05);
             border-radius: 15px;
@@ -234,7 +209,7 @@
             gap: 10px;
         }
         
-        /* ========== FACT BOX ========== */
+        /* FACT BOX = */
         .fact-box {
             background: linear-gradient(135deg, rgba(255,80,0,0.1), rgba(0,122,255,0.1));
             border-radius: 15px;
@@ -243,7 +218,7 @@
             border: 1px solid rgba(255, 80, 0, 0.2);
         }
         
-        /* ========== PLAYER GALLERY ========== */
+        /* PLAYER GALLERY */
         .player-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -295,7 +270,7 @@
             color: #cccccc;
         }
         
-        /* ========== STATISTICS TABLE ========== */
+        /*  STATISTICS TABLE  */
         .stats-container {
             overflow-x: auto;
             margin-top: 20px;
@@ -327,7 +302,7 @@
             background: rgba(255, 80, 0, 0.05);
         }
         
-        /* ========== TEAMS GRID ========== */
+        /*  TEAMS GRID */
         .teams-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -349,7 +324,7 @@
             transform: scale(1.05);
         }
         
-        /* ========== INFO ITEMS ========== */
+        /* INFO ITEMS */
         .info-item {
             display: flex;
             align-items: center;
@@ -376,7 +351,7 @@
             margin-bottom: 5px;
         }
         
-        /* ========== COURT DIAGRAM ========== */
+        /* COURT DIAGRAM  */
         .court-diagram {
             width: 100%;
             height: 300px;
@@ -395,7 +370,7 @@
             text-align: center;
         }
         
-        /* ========== MODAL STYLES ========== */
+        /* MODAL STYLES  */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -476,7 +451,7 @@
             border: 2px solid #ffcc00;
         }
         
-        /* ========== FOOTER ========== */
+        /* FOOTER  */
         .main-footer {
             background-color: #0a1520;
             color: white;
@@ -535,7 +510,7 @@
             color: #aaaaaa;
         }
         
-        /* ========== RESPONSIVE DESIGN ========== */
+        /*  RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
@@ -681,7 +656,7 @@
             <h2 class="section-title">BASKETBALL COURT</h2>
             <div class="court-diagram">
                 <div class="court-label">
-                    <h3>🏀 Basketball Court Areas</h3>
+                    <h3>Basketball Court Areas</h3>
                     <p>1. Paint / Key Area</p>
                     <p>2. Three-Point Line</p>
                     <p>3. Free Throw Line</p>
@@ -1047,26 +1022,27 @@
             </div>
         </div>
     </div>
-
+<br><br>
+<br><br>
     <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <h5>Sports Categories</h5>
+                    <h5>quick links</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">Team Sports</a></li>
-                        <li><a href="index.html">Individual Sports</a></li>
-                        <li><a href="basketball.html">Basketball</a></li>
+                        <li><a href="basketball.html">home</a></li>
+                        <li><a href="contact.html"></a> contact</li>
+                        <li><a href="guest.html">gustbook</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h5>Basketball Leagues</h5>
+                    <h5>games</h5>
                     <ul class="footer-links">
-                        <li><a href="#">NBA</a></li>
-                        <li><a href="#">FIBA</a></li>
-                        <li><a href="#">EuroLeague</a></li>
+                        <li><a href="cricket.html">cricket</a></li>
+                        <li><a href="football.html">football</a></li>
+                        <li><a href="rugby.html">rugby</a></li>
                     </ul>
                 </div>
                 
@@ -1074,23 +1050,23 @@
                     <h5>Contact Us</h5>
                     <ul class="footer-links">
                         <li><a href="contact-us.html">SportsInfo HQ</a></li>
-                        <li><a href="mailto:info@sportsinfo.com">info@sportsinfo.com</a></li>
-                        <li><a href="tel:+1-234-567-890">+1-234-567-890</a></li>
+                        <li><a href="mailto:kkshafique353@gmail.com">kkshafique353@gmail.com</a></li>
+                        <li><a href="tel:+3279230651">923279230651</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h5>Follow Us</h5>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="www.x.com"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="www.facebook.com"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="www.instagram.com"><i class="fab fa-instagram"></i> Instagram</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                © 2026 SportsInfo Pro | All Rights Reserved
+                © 2026 SportsInfo All Rights Reserved
             </div>
         </div>
     </footer>

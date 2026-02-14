@@ -586,6 +586,70 @@
             margin-bottom: 15px;
             color: #cccccc;
         }
+
+/* ========== FOOTER FIXES - SIRF YEH LAGAO ========== */
+
+/* 1. Footer position theek karo */
+.main-footer {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 80px;
+    border-top: 1px solid #ffcc00;
+    width: 100%;
+    position: relative;  /* absolute ki jagah relative karo */
+    bottom: auto;        /* bottom hatao */
+    clear: both;
+}
+
+/* 2. Body padding hatao */
+body {
+    padding-bottom: 0;  /* 150px ki jagah 0 karo */
+}
+
+/* 3. Footer responsive - mobile ke liye */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);  /* Tablet: 2 columns */
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr;  /* Mobile: 1 column */
+        gap: 25px;
+        text-align: center;  /* Center text on mobile */
+    }
+    
+    .footer-column h5 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+        font-size: 13px;
+    }
+    
+    .footer-bottom {
+        font-size: 12px;
+        padding: 15px 0;
+    }
+}
+
+/* 4. Icons ke liye */
+.footer-links i {
+    margin-right: 8px;
+    width: 16px;
+    color: #ffcc00;
+}
+
+@media (max-width: 480px) {
+    .footer-links i {
+        margin-right: 5px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -790,24 +854,7 @@
                         <div class="player-position">Flanker</div>
                     </div>
                 </div>
-                
-                <div class="player-card" onclick="showPlayerModal('wilkinson')">
-                    <img src="https://images.unsplash.com/photo-1552642986-ccb41e7059e7?w=500" alt="Jonny Wilkinson" class="player-image">
-                    <div class="player-info">
-                        <div class="player-name">Jonny Wilkinson</div>
-                        <div class="player-country">England</div>
-                        <div class="player-position">Fly-half</div>
-                    </div>
-                </div>
-                
-                <div class="player-card" onclick="showPlayerModal('habana')">
-                    <img src="https://images.unsplash.com/photo-1580086319619-3ed498161c0a?w=500" alt="Bryan Habana" class="player-image">
-                    <div class="player-info">
-                        <div class="player-name">Bryan Habana</div>
-                        <div class="player-country">South Africa</div>
-                        <div class="player-position">Wing</div>
-                    </div>
-                </div>
+            
             </div>
         </div>
 
@@ -934,38 +981,38 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <h5>Rugby Types</h5>
+                    <h5>game</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Rugby Union</a></li>
-                        <li><a href="#">Rugby League</a></li>
-                        <li><a href="#">Rugby Sevens</a></li>
+                        <li><a href="tennies.html">tennis</a></li>
+                        <li><a href="motorcycle.html">motercycle</a></li>
+                        <li><a href="cricket.html">cricket</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h5>Major Tournaments</h5>
+                    <h5>Quicl links</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Rugby World Cup</a></li>
-                        <li><a href="#">Six Nations</a></li>
-                        <li><a href="#">Rugby Championship</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="guest.html">guest book</a></li>
+                        <li><a href="contact.html">contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h5>Contact Us</h5>
                     <ul class="footer-links">
-                        <li><a href="contact-us.html">SportsInfo HQ</a></li>
-                        <li><a href="mailto:info@sportsinfo.com">info@sportsinfo.com</a></li>
-                        <li><a href="tel:+1-234-567-890">+1-234-567-890</a></li>
+                        <li><a href="contact.html">SportsInfo HQ</a></li>
+                        <li><a href="mailto:abq@gmail.com">abq@gmail.com.com</a></li>
+                        <li><a href="tel:+1-234-567-890">032478675458757</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h5>Follow Us</h5>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="www.x.com"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="www.facebook.com"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="www.instagram.com"><i class="fab fa-instagram"></i> Instagram</a></li>
                     </ul>
                 </div>
             </div>

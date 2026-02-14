@@ -21,6 +21,55 @@
             font-family: 'Poppins', sans-serif;
             padding-top: 70px;
         }
+        /* NAVBAR FIXES - GUESTBOOK PAGE */
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 10px 0;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 5px 0;
+    }
+    
+    .nav-link {
+        font-size: 13px;
+        padding: 5px 10px;
+        background: rgba(255,204,0,0.1);
+        border-radius: 20px;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background: #ffcc00;
+        color: #000;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: row !important;
+        gap: 8px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+}
         
         .main-nav {
             background: rgba(4, 12, 101, 0.95);
