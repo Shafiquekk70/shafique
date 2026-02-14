@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
+      
         * {
             margin: 0;
             padding: 0;
@@ -41,12 +42,17 @@
         }
 
         .col-lg-3 {
-            width: 33.33%;
+             width: 33.33%; 
+              /* desktop (large screen) ke liye: 4 columns per row  */
         }
 
         .col-md-6 {
             width: 50%;
+            /* medium screen ke liye: 2 columns per row */
         }
+        /* Screen chhoti ho → columns adjust ho jayein. */
+
+/* Mobile me 1 column per row. */
 
         @media (max-width: 992px) {
             .col-lg-3 {
@@ -60,6 +66,7 @@
             }
         }
 
+        /* --- Typography --- */
         h1 { font-size: 2rem; } 
         h2 { font-size: 1.75rem; } 
         h3 { font-size: 1.5rem; }  
@@ -67,7 +74,7 @@
         h5 { font-size: 1rem; }    
         h6 { font-size: 0.875rem; }
 
-        /* Navbar */
+        /* --- Navbar --- */
         .navbar {
             background-color: #031228;
             position: fixed;
@@ -131,46 +138,13 @@
             cursor: pointer;
         }
 
-        /* News Ticker */
-        .news-ticker {
-            background: linear-gradient(90deg, #ffcc00, #ffd633);
-            color: #000;
-            padding: 10px 0;
-            margin-top: 70px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .ticker-label {
-            background: #000;
-            color: #ffcc00;
-            padding: 5px 15px;
-            font-weight: bold;
-            margin-right: 20px;
-            z-index: 2;
-            white-space: nowrap;
-        }
-
-        .ticker-content {
-            white-space: nowrap;
-            animation: ticker 20s linear infinite;
-            font-weight: 600;
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        /* Slider */
+        /* --- Slider --- */
         .slider-container {
             border: 2px solid #ffcc00;
             border-radius: 30px;
             overflow: hidden;
             box-shadow: 0 0 40px rgba(255, 204, 0, 0.2);
-            margin-top: 30px;
+            margin-top: 100px;
             position: relative;
         }
 
@@ -209,7 +183,7 @@
             background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
             z-index: 1;
         }
-
+/* crousel ke under jo contaner hai */
         .carousel-caption {
             position: absolute;
             bottom: 15%;
@@ -231,7 +205,7 @@
             margin-bottom: 10px;
         }
 
-        /* Search Box */
+        /* --- Search Box --- */
         .search-box {
             background: rgba(255, 255, 255, 0.08);
             border: 1.5px solid rgba(255, 204, 0, 0.3);
@@ -269,102 +243,7 @@
             background: #ffd633;
         }
 
-        /* Live Matches Section */
-        .live-matches {
-            margin: 40px 0;
-        }
-
-        .section-subtitle {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.5rem;
-            color: #ffcc00;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .live-indicator {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            background-color: #ff0000;
-            border-radius: 50%;
-            margin-right: 10px;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        .matches-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .match-card {
-            background: linear-gradient(145deg, #0a1a2a, #05111c);
-            border: 1px solid rgba(255, 204, 0, 0.2);
-            border-radius: 15px;
-            padding: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .match-card:hover {
-            transform: translateY(-5px);
-            border-color: #ffcc00;
-            box-shadow: 0 10px 30px rgba(255, 204, 0, 0.2);
-        }
-
-        .match-time {
-            color: #ffcc00;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
-
-        .match-teams {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .team {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .team img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .team span {
-            font-weight: 600;
-        }
-
-        .match-score {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #ffcc00;
-        }
-
-        .match-status {
-            color: #aaa;
-            font-size: 0.9rem;
-            text-align: center;
-            padding-top: 10px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
+        /* game on hai wala  */
         .section-title {
             font-family: 'Oswald', sans-serif;
             font-size: 3rem;
@@ -376,8 +255,8 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        /* games cards */
 
-        /* Sport Cards */
         .sport-card {
             position: relative;
             border-radius: 25px;
@@ -388,6 +267,7 @@
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(5px);
             transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            
         }
 
         .sport-card:hover {
@@ -454,79 +334,7 @@
             transform: scale(1.05);
         }
 
-        /* Popular Section */
-        .popular-section {
-            margin: 50px 0;
-        }
-
-        .popular-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .popular-item {
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .popular-item:hover {
-            background: rgba(255,204,0,0.1);
-            transform: translateX(10px);
-        }
-
-        .rank {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2rem;
-            color: #ffcc00;
-            opacity: 0.5;
-        }
-
-        .popular-content h4 {
-            margin-bottom: 5px;
-        }
-
-        .popular-content p {
-            color: #ffcc00;
-            font-size: 0.9rem;
-        }
-
-        /* Stats Section */
-        .stats-section {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin: 50px 0;
-            padding: 30px;
-            background: linear-gradient(135deg, #0a1a2a, #031228);
-            border-radius: 20px;
-            border: 1px solid rgba(255,204,0,0.2);
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2.5rem;
-            color: #ffcc00;
-            font-weight: bold;
-        }
-
-        .stat-label {
-            color: #aaa;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Footer */
+        /* --- Footer --- */
         .footer {
             background-color: #031228;
             color: white;
@@ -552,21 +360,71 @@
                 width: 50%;
                 margin-bottom: 30px;
             }
-            .stats-section {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .popular-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
         @media (max-width: 768px) {
             .footer .col-lg-3 {
                 width: 100%;
             }
+        }
+
+        .footer h5 {
+            color: #ffcc00;
+            margin-bottom: 15px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+/* footer hover */
+        .footer ul li a:hover {
+            color: #ffcc00;
+        }
+/* footer neeche se */
+        .footer-bottom {
+            padding: 15px 0;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+      /* text beech main laane k lie */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-5 {
+            margin-bottom: 50px;
+        }
+
+        .hide {
+            opacity: 0;
+            transform: scale(0.9);
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* --- Mobile Navigation --- */
+        @media (max-width: 768px) {
             .nav-toggle {
                 display: block;
             }
+
             .nav-menu {
                 position: fixed;
                 top: 70px;
@@ -579,138 +437,60 @@
                 box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
                 padding: 20px 0;
             }
+
             .nav-menu.active {
                 left: 0;
             }
+
             .nav-item {
                 margin: 15px 0;
             }
+
             .section-title {
                 font-size: 2rem;
             }
+
             .carousel-caption {
                 padding: 15px;
                 bottom: 10%;
             }
+
             .carousel-caption h3 {
                 font-size: 1.2rem;
             }
-            .stats-section {
-                grid-template-columns: 1fr;
-            }
-            .popular-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
-        @media (max-width: 480px) {
-            .search-box {
-                flex-direction: column;
-                gap: 10px;
-                border-radius: 25px;
-                padding: 15px;
-            }
-            .search-box input {
-                width: 100%;
-                border-bottom: 1px solid rgba(255, 204, 0, 0.3);
-                border-radius: 0;
-                padding: 10px 0;
-            }
-            .search-box button {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .sport-card {
-                height: 220px;
-            }
-            .carousel-caption {
-                padding: 10px;
-            }
-        }
-/* Footer Styles */
-.footer {
-    background-color: #031228;
-    color: white;
-    padding: 40px 20px 20px;
-    margin-top: 50px;
-    border-radius: 15px;
-    width: 100%;
-}
-
-.footer .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
-
-.footer .col-lg-3 {
-    padding: 0 15px;
-    width: 25%;
-}
-
-.footer h5 {
-    color: #ffcc00;
-    margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer ul li {
-    margin-bottom: 12px;
-}
-
-.footer ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-}
-
-.footer ul li a:hover {
-    color: #ffcc00;
-    opacity: 1;
-    padding-left: 5px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 20px 0 10px;
-    margin-top: 30px;
-    border-top: 1px solid rgba(255, 204, 0, 0.2);
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Footer Responsive */
-@media (max-width: 992px) {
-    .footer .col-lg-3 {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer .col-lg-3 {
-        width: 100%;
-        text-align: center;
+/* Search Bar Responsive*/
+@media (max-width: 480px) {
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 25px;
+        padding: 15px;
     }
     
-    .footer ul li a:hover {
-        padding-left: 0;
+    .search-box input {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+        border-radius: 0;
+        padding: 10px 0;
+    }
+    
+    .search-box button {
+        width: 100%;
     }
 }
 
-        
+@media (max-width: 360px) {
+    .sport-card {
+        height: 220px;
+    }
+    
+    .carousel-caption {
+        padding: 10px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -727,21 +507,8 @@
             </ul>
         </div>
     </nav>
-
-    <!-- Breaking News Ticker -->
-    <div class="news-ticker">
-        <div class="ticker-label">BREAKING</div>
-        <div class="ticker-content">
-            🏆 FIFA World Cup 2026: Argentina qualifies for finals • 
-            🏏 IPL Auction: Record-breaking bid for young talent • 
-            ⚽ Champions League: Semi-final matchups announced • 
-            🎾 Wimbledon: New grass court records shattered •
-            🏀 NBA Finals: Game 7 tonight!
-        </div>
-    </div>
-
+<!-- carousel -->
     <div class="container">
-        <!-- Carousel -->
         <div class="slider-container">
             <div class="carousel" id="heroCarousel">
                 <div class="carousel-inner">
@@ -762,17 +529,15 @@
                 </div>
             </div>
         </div>
-
-        <!-- Search Box -->
+<!-- search  -->
         <div class="search-box">
             <input type="text" placeholder="Search for sports, teams or players..." id="searchInput">
             <button id="searchBtn">GO</button>
         </div>
+        <!-- gome on hai wala  -->
 
-        <!-- GAME ON hai Section -->
         <h2 class="section-title">GAME ON hai</h2>
-
-        <!-- Sports Cards Grid -->
+        <!-- sports ke cards ka cont -->
         <div class="row" id="sportsGrid">
             <!-- Boxing -->
             <div class="col-lg-3 col-md-6">
@@ -918,113 +683,9 @@
                 </div>
             </div>
         </div>
-
-         <!-- Live Matches Section -->
-        <div class="live-matches">
-            <div class="section-subtitle">
-                <span class="live-indicator"></span> LIVE & UPCOMING MATCHES
-            </div>
-            <div class="matches-container">
-                <div class="match-card">
-                    <div class="match-time">LIVE</div>
-                    <div class="match-teams">
-                        <div class="team">
-                            <img src="../New folder (5)/IMGS/team-india.png" alt="IND" onerror="this.style.display='none'">
-                            <span>IND</span>
-                        </div>
-                        <div class="match-score">127/3 (15.2)</div>
-                        <div class="team">
-                            <img src="../New folder (5)/IMGS/team-aus.png" alt="AUS" onerror="this.style.display='none'">
-                            <span>AUS</span>
-                        </div>
-                    </div>
-                    <div class="match-status">India need 45 runs in 28 balls</div>
-                </div>
-                
-                <div class="match-card">
-                    <div class="match-time">20:30</div>
-                    <div class="match-teams">
-                        <div class="team">
-                            <img src="../New folder (5)/IMGS/team-messi.png" alt="ARG" onerror="this.style.display='none'">
-                            <span>ARG</span>
-                        </div>
-                        <div class="match-score">VS</div>
-                        <div class="team">
-                            <img src="../New folder (5)/IMGS/team-fra.png" alt="FRA" onerror="this.style.display='none'">
-                            <span>FRA</span>
-                        </div>
-                    </div>
-                    <div class="match-status">World Cup Final • Today</div>
-                </div>
-                
-                <div class="match-card">
-                    <div class="match-time">22:15</div>
-                    <div class="match-teams">
-                        <div class="team">
-                            <img src="../New folder (5)/IMGS/team-lakers.png" alt="LAL" onerror="this.style.display='none'">
-                            <span>LAL</span>
-                        </div>
-                        <div class="match-score">VS</div>
-                        <div class="team">
-                            <img src="../New folder (5)/IMGS/team-gsw.png" alt="GSW" onerror="this.style.display='none'">
-                            <span>GSW</span>
-                        </div>
-                    </div>
-                    <div class="match-status">NBA • 2nd Quarter</div>
-                </div>
-            </div>
-        </div>
-
-       
-
-        <!-- Popular Now Section -->
-        <div class="popular-section">
-            <h2 class="section-title">POPULAR THIS WEEK</h2>
-            <div class="popular-grid">
-                <div class="popular-item">
-                    <span class="rank">#1</span>
-                    <div class="popular-content">
-                        <h4>World Cup 2026 Highlights</h4>
-                        <p>45K watching now</p>
-                    </div>
-                </div>
-                <div class="popular-item">
-                    <span class="rank">#2</span>
-                    <div class="popular-content">
-                        <h4>Olympics Qualifiers</h4>
-                        <p>32K watching now</p>
-                    </div>
-                </div>
-                <div class="popular-item">
-                    <span class="rank">#3</span>
-                    <div class="popular-content">
-                        <h4>Champions League Final</h4>
-                        <p>28K watching now</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Stats Counter Section -->
-        <div class="stats-section">
-            <div class="stat-item">
-                <div class="stat-number" data-target="150">0</div>
-                <div class="stat-label">Live Matches</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="25">0</div>
-                <div class="stat-label">Sports Categories</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="1000">0</div>
-                <div class="stat-label">Active Players</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="50">0</div>
-                <div class="stat-label">Tournaments</div>
-            </div>
-        </div>
     </div>
+
+    <br>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1064,120 +725,83 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                @ 2026 SportsInfo | All Rights Reserved
+                @ 2026 SportsInfo| All Rights Reserved
             </div>
         </div>
     </footer>
+<script>
+//    Mobile Navigation Toggle
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
 
-    <script>
-        // Mobile Navigation Toggle
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
 
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+// Simple Carouse
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-item');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    if (index >= totalSlides) currentSlide = 0;
+    if (index < 0) currentSlide = totalSlides - 1;
+    const carouselInner = document.querySelector('.carousel-inner');
+    carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+// Auto slide every 3 seconds
+setInterval(() => {
+    currentSlide++;
+    showSlide(currentSlide);
+}, 3000);
+
+// Search Functionality
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+const grid = document.getElementById('sportsGrid');
+
+// Save original order of cards
+const originalCards = Array.from(grid.children);
+
+function performSearch() {
+    const value = searchInput.value.trim().toLowerCase();
+
+    if (!value) {
+        // Restore original order if search empty
+        grid.innerHTML = "";
+        originalCards.forEach(card => {
+            card.style.display = "block";
+            grid.appendChild(card);
         });
+        return;
+    }
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Simple Carousel
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-item');
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            if (index >= totalSlides) currentSlide = 0;
-            if (index < 0) currentSlide = totalSlides - 1;
-            const carouselInner = document.querySelector('.carousel-inner');
-            carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+    Array.from(grid.children).forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(value)) {
+            card.style.display = "block";
+            grid.prepend(card); // Move matching cards to top
+        } else {
+            card.style.display = "none";
         }
+    });
+}
 
-        // Auto slide every 3 seconds
-        setInterval(() => {
-            currentSlide++;
-            showSlide(currentSlide);
-        }, 3000);
-
-        // Search Functionality
-        const searchInput = document.getElementById('searchInput');
-        const searchBtn = document.getElementById('searchBtn');
-        const grid = document.getElementById('sportsGrid');
-
-        // Save original order of cards
-        const originalCards = Array.from(grid.children);
-
-        function performSearch() {
-            const value = searchInput.value.trim().toLowerCase();
-
-            if (!value) {
-                // Restore original order if search empty
-                grid.innerHTML = "";
-                originalCards.forEach(card => {
-                    card.style.display = "block";
-                    grid.appendChild(card);
-                });
-                return;
-            }
-
-            Array.from(grid.children).forEach(card => {
-                const text = card.innerText.toLowerCase();
-                if (text.includes(value)) {
-                    card.style.display = "block";
-                    grid.prepend(card); // Move matching cards to top
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        }
-
-        // Event listeners for search
-        searchBtn.addEventListener("click", performSearch);
-        searchInput.addEventListener("input", performSearch);
-        searchInput.addEventListener("keypress", e => {
-            if (e.key === "Enter") performSearch();
-        });
-
-        // Animated Counter
-        function animateCounter() {
-            const counters = document.querySelectorAll('.stat-number');
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const updateCount = () => {
-                    const current = +counter.innerText;
-                    const increment = target / 100;
-                    
-                    if (current < target) {
-                        counter.innerText = Math.ceil(current + increment);
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                
-                updateCount();
-            });
-        }
-
-        // Trigger counter when stats section is visible
-        const statsSection = document.querySelector('.stats-section');
-        if (statsSection) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateCounter();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            observer.observe(statsSection);
-        }
-    </script>
+// Event listeners
+searchBtn.addEventListener("click", performSearch);
+searchInput.addEventListener("input", performSearch);
+searchInput.addEventListener("keypress", e => {
+    if (e.key === "Enter") performSearch();
+});
+</script>
       
 </body>
 </html>
