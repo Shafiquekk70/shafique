@@ -49,7 +49,7 @@
             z-index: -1;
         }
         
-        /* ========== NAVIGATION ========== */
+        /* NAVIGATION  */
         .main-nav {
             background: rgba(11, 38, 105, 0.95);
             padding: 20px 0;
@@ -102,14 +102,14 @@
         
        
         
-        /* ========== MAIN CONTAINER ========== */
+        /*  MAIN CONTAINER */
         .main-container {
             width: 90%;
             max-width: 1200px;
             margin: 100px auto 50px;
         }
         
-        /* ========== PAGE HEADER ========== */
+        /*PAGE HEADER  */
         .page-header {
             text-align: center;
             margin-bottom: 50px;
@@ -126,27 +126,8 @@
             margin-bottom: 20px;
         }
         
-        /* ========== BACK BUTTON ========== */
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            background: #ffcc00;
-            color: white;
-            border: 1px solid rgba(52, 152, 219, 0.3);
-            border-radius: 50px;
-            padding: 12px 25px;
-            font-weight: 600;
-            text-decoration: none;
-            margin-bottom: 30px;
-            transition: all 0.3s;
-        }
         
-        .back-button:hover {
-            background: #ffcc00;
-            transform: translateX(-5px);
-        }
-        
-        /* ========== HERO SECTION ========== */
+        /*  HERO SECTION  */
         .hero-section {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 25px;
@@ -178,7 +159,7 @@
             color: #cccccc;
         }
         
-        /* ========== CONTENT CARDS ========== */
+        /*  CONTENT CARDS */
         .content-card {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
@@ -203,7 +184,7 @@
             border-bottom: 2px solid #ffcc00;
         }
         
-        /* ========== TWO COLUMN LAYOUT ========== */
+        /*TWO COLUMN LAYOUT  */
         .two-column {
             display: flex;
             gap: 30px;
@@ -214,7 +195,7 @@
             flex: 1;
         }
         
-        /* ========== FEATURE BOX ========== */
+        /*FEATURE BOX */
         .feature-box {
             background: rgba(52, 152, 219, 0.05);
             border-radius: 15px;
@@ -232,7 +213,7 @@
             gap: 10px;
         }
         
-        /* ========== FACT BOX ========== */
+        /* FACT BOX */
         .fact-box {
             background: #ffcc00;
             border-radius: 15px;
@@ -240,7 +221,7 @@
             margin: 15px 0;
             border: 1px solid #ffcc00;}
         
-        /* ========== PLAYER GALLERY ========== */
+        /* PLAYER GALLERY*/
         .player-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -682,9 +663,9 @@
     }
 }
 
-/* ========== FOOTER FIXES ========== */
 
-/* Footer position theek karo */
+
+/* Foote */
 .main-footer {
     background-color: #0c2461;
     color: white;
@@ -692,14 +673,14 @@
     margin-top: 80px;
     border-top: 1px solid rgba(255,255,255,0.1);
     width: 100%;
-    position: relative;  /* absolute ki jagah relative */
+    position: relative;  
     bottom: auto;
     clear: both;
 }
 
-/* Body padding hatao */
+
 body {
-    padding-bottom: 0;  /* 150px ki jagah 0 */
+    padding-bottom: 0;  
 }
 
 /* Footer grid responsive */
@@ -793,14 +774,12 @@ body {
 
     <div class="main-container">
         <div class="page-header">
-            <a href="index.html" class="back-button">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
+           
             <h1 class="page-title">SWIMMING</h1>
         </div>
         
         <div class="hero-section">
-            <img src="https://images.unsplash.com/photo-1595435934249-5df7ed86c4c2?w=1200" alt="Swimming Pool" class="hero-image">
+            <img src="../New folder (5)/IMGS/SWMINING.webp" alt="Swimming Pool" class="hero-image">
             <h2 class="hero-title">THE ART OF AQUATIC SPEED</h2>
             <p class="hero-description">
                 Swimming is an individual or team racing sport that requires the use of one's entire body to move through water. It's one of the most popular Olympic sports.
@@ -987,7 +966,7 @@ body {
             
             <div class="player-gallery">
                 <div class="player-card" onclick="showPlayerModal('phelps')">
-                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500" alt="Michael Phelps" class="player-image">
+                    <img src="../New folder (5)/famousplayer/katie.webp" alt="Michael Phelps" class="player-image">
                     <div class="player-info">
                         <div class="player-name">Michael Phelps</div>
                         <div class="player-country">USA</div>
@@ -996,28 +975,10 @@ body {
                 </div>
                 
                 <div class="player-card" onclick="showPlayerModal('ledecky')">
-                    <img src="https://images.unsplash.com/photo-1549060279-7e168fce7090?w=500" alt="Katie Ledecky" class="player-image">
+                    <img src="../New folder (5)/famousplayer/michel.jfif" alt="Katie Ledecky" class="player-image">
                     <div class="player-info">
                         <div class="player-name">Katie Ledecky</div>
                         <div class="player-country">USA</div>
-                        <div class="player-position">Freestyle</div>
-                    </div>
-                </div>
-                
-                <div class="player-card" onclick="showPlayerModal('spitz')">
-                    <img src="https://images.unsplash.com/photo-1552642986-ccb41e7059e7?w=500" alt="Mark Spitz" class="player-image">
-                    <div class="player-info">
-                        <div class="player-name">Mark Spitz</div>
-                        <div class="player-country">USA</div>
-                        <div class="player-position">Freestyle/Butterfly</div>
-                    </div>
-                </div>
-                
-                <div class="player-card" onclick="showPlayerModal('thorpe')">
-                    <img src="https://images.unsplash.com/photo-1580086319619-3ed498161c0a?w=500" alt="Ian Thorpe" class="player-image">
-                    <div class="player-info">
-                        <div class="player-name">Ian Thorpe</div>
-                        <div class="player-country">Australia</div>
                         <div class="player-position">Freestyle</div>
                     </div>
                 </div>
@@ -1133,7 +1094,7 @@ body {
             </div>
             <div class="modal-body">
                 <div class="modal-row">
-                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500" alt="Michael Phelps" class="modal-image">
+                    <img src="../New folder (5)/famousplayer/katie.webp" alt="Michael Phelps" class="modal-image">
                     <div style="flex: 1;">
                         <h3 style="color: #3498db; margin-bottom: 15px;">The Baltimore Bullet</h3>
                         <p><strong>Born:</strong> June 30, 1985</p>
@@ -1170,7 +1131,7 @@ body {
             </div>
             <div class="modal-body">
                 <div class="modal-row">
-                    <img src="https://images.unsplash.com/photo-1549060279-7e168fce7090?w=500" alt="Katie Ledecky" class="modal-image">
+                    <img src="../New folder (5)/famousplayer/michel.jfif" alt="Katie Ledecky" class="modal-image">
                     <div style="flex: 1;">
                         <h3 style="color: #3498db; margin-bottom: 15px;">Queen of Distance Swimming</h3>
                         <p><strong>Born:</strong> March 17, 1997</p>
@@ -1252,7 +1213,7 @@ body {
         </div>
     </footer>
 
-    <!-- MINIMAL JAVASCRIPT -->
+    
     <script>
         // Simple Modal Functions
         function showPlayerModal(playerId) {

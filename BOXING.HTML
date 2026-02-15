@@ -128,20 +128,7 @@
             margin-bottom: 20px;
         }
         
-        /* ========== BACK BUTTON ========== */
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(255, 87, 34, 0.1);
-            color:#ffcc00;
-            border: 1px solid #ffcc00;
-            border-radius: 50px;
-            padding: 12px 25px;
-            font-weight: 600;
-            text-decoration: none;
-            margin-bottom: 30px;
-            transition: all 0.3s;
-        }
+        
         
         .back-button:hover {
             background: #ffcc00;
@@ -296,7 +283,7 @@
             color: #cccccc;
         }
         
-        /* ========== STATISTICS TABLE ========== */
+        /* STATISTICS TABLE */
         .stats-container {
             overflow-x: auto;
             margin-top: 20px;
@@ -328,7 +315,7 @@
             background: rgba(255, 87, 34, 0.05);
         }
         
-        /* ========== WEIGHT CLASSES GRID ========== */
+        /* WEIGHT CLASSES GRID */
         .weight-classes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -470,7 +457,7 @@
             border: 2px solid #ffcc00;
         }
         
-        /* ========== FORMAT BOXES ========== */
+        /*FORMAT BOXES */
         .format-container {
             display: flex;
             gap: 20px;
@@ -492,7 +479,7 @@
             margin-bottom: 10px;
         }
         
-        /* ========== FOOTER ========== */
+        /*  FOOTER */
         .main-footer {
             background-color: #1a0f0a;
             color: white;
@@ -551,7 +538,7 @@
             color: #aaaaaa;
         }
         
-        /* ========== RESPONSIVE DESIGN ========== */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
@@ -632,18 +619,18 @@
 
 
 
-/* ===== MOBILE FIXES - BOXING PAGE ===== */
 
-/* FIX 1: FOOTER KO THEEK KARO */
+
+
 @media (max-width: 768px) {
     body {
         position: relative;
         min-height: 100vh;
-        padding-bottom: 0 !important;  /* Extra padding hatao */
+        padding-bottom: 0 !important;
     }
     
     .main-footer {
-        position: relative !important;  /* Absolute hatao */
+        position: relative !important;  
         bottom: auto !important;
         margin-top: 40px;
         padding: 30px 0 15px;
@@ -911,10 +898,6 @@
         margin: 20px 0;
     }
     
-    .back-button {
-        padding: 10px 18px;
-        font-size: 13px;
-    }
 }
 
     
@@ -939,10 +922,7 @@
 
     <!-- Main Content -->
     <div class="main-container">
-        <!-- Back Button -->
-        <a href="index.html" class="back-button">
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
+    
 
         <!-- Page Header -->
         <div class="page-header">
@@ -951,7 +931,7 @@
         
         <!-- Hero Section -->
         <div class="hero-section">
-            <img src="https://images.unsplash.com/photo-1542848282-ee4e5c2f0b8c?w=1200" alt="Boxing Match" class="hero-image">
+            <img src="../New folder (5)/IMGS/BOXING.webp" alt="Boxing Match" class="hero-image">
             <h2 class="hero-title">THE SWEET SCIENCE</h2>
             <p class="hero-description">
                 Boxing is a combat sport in which two people, usually wearing protective gloves, throw punches at each other for a predetermined amount of time in a boxing ring.
@@ -1273,7 +1253,7 @@
             <div class="boxer-gallery">
                 <!-- Boxer 1 -->
                 <div class="boxer-card" onclick="showBoxerModal('ali')">
-                    <img src="https://images.unsplash.com/photo-1605296830685-7e7920ebc7ca?w=500" alt="Muhammad Ali" class="boxer-image">
+                    <img src="../New folder (5)/famousplayer/muhammad.webp" alt="Muhammad Ali" class="boxer-image">
                     <div class="boxer-info">
                         <div class="boxer-name">Muhammad Ali</div>
                         <div class="boxer-country">USA</div>
@@ -1287,7 +1267,7 @@
                 
                 <!-- Boxer 2 -->
                 <div class="boxer-card" onclick="showBoxerModal('tyson')">
-                    <img src="https://images.unsplash.com/photo-1585620385457-212a64debcdd?w=500" alt="Mike Tyson" class="boxer-image">
+                    <img src="../New folder (5)/famousplayer/mike.webp" alt="Mike Tyson" class="boxer-image">
                     <div class="boxer-info">
                         <div class="boxer-name">Mike Tyson</div>
                         <div class="boxer-country">USA</div>
@@ -1302,7 +1282,7 @@
                 
                 <!-- Boxer 3 -->
                 <div class="boxer-card" onclick="showBoxerModal('mayweather')">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500" alt="Floyd Mayweather" class="boxer-image">
+                    <img src="../New folder (5)/famousplayer/floyd.webp" alt="Floyd Mayweather" class="boxer-image">
                     <div class="boxer-info">
                         <div class="boxer-name">Floyd Mayweather</div>
                         <div class="boxer-country">USA</div>
@@ -1317,7 +1297,7 @@
                 
                 <!-- Boxer 4 -->
                 <div class="boxer-card" onclick="showBoxerModal('pacquiao')">
-                    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc071?w=500" alt="Manny Pacquiao" class="boxer-image">
+                    <img src="../New folder (5)/famousplayer/manny.webp" alt="Manny Pacquiao" class="boxer-image">
                     <div class="boxer-info">
                         <div class="boxer-name">Manny Pacquiao</div>
                         <div class="boxer-country">Philippines</div>
@@ -1405,7 +1385,7 @@
             </div>
             <div class="modal-body">
                 <div class="modal-row">
-                    <img src="https://images.unsplash.com/photo-1605296830685-7e7920ebc7ca?w=500" alt="Muhammad Ali" class="modal-image">
+                    <img src="../New folder (5)/famousplayer/muhammad.webp" alt="Muhammad Ali" class="modal-image">
                     <div style="flex: 1;">
                         <h3 style="color:#ffcc00; margin-bottom: 15px;">"The Greatest"</h3>
                         <p><strong>Nationality:</strong> American</p>
@@ -1442,7 +1422,7 @@
             </div>
             <div class="modal-body">
                 <div class="modal-row">
-                    <img src="https://images.unsplash.com/photo-1585620385457-212a64debcdd?w=500" alt="Mike Tyson" class="modal-image">
+                    <img src="../New folder (5)/famousplayer/mike.webp" alt="Mike Tyson" class="modal-image">
                     <div style="flex: 1;">
                         <h3 style="color: #ffcc00; margin-bottom: 15px;">"Iron Mike"</h3>
                         <p><strong>Nationality:</strong> American</p>
@@ -1479,7 +1459,7 @@
             </div>
             <div class="modal-body">
                 <div class="modal-row">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500" alt="Floyd Mayweather" class="modal-image">
+                    <img src="../New folder (5)/famousplayer/floyd.webp" alt="Floyd Mayweather" class="modal-image">
                     <div style="flex: 1;">
                         <h3 style="color:#040c2a; margin-bottom: 15px;">"Money" / "Pretty Boy"</h3>
                         <p><strong>Nationality:</strong> American</p>
@@ -1516,7 +1496,7 @@
             </div>
             <div class="modal-body">
                 <div class="modal-row">
-                    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc071?w=500" alt="Manny Pacquiao" class="modal-image">
+                    <img src="../New folder (5)/famousplayer/manny.webp" alt="Manny Pacquiao" class="modal-image">
                     <div style="flex: 1;">
                         <h3 style="color: #ffcc00; margin-bottom: 15px;">"PacMan"</h3>
                         <p><strong>Nationality:</strong> Filipino</p>
